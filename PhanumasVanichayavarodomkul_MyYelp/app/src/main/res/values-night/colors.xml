@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="primaryColor">#BB86FC</color> <!-- Light Purple -->
+    <color name="primaryDarkColor">#3700B3</color> <!-- Dark Purple -->
+    <color name="accentColor">#03DAC5</color> <!-- Teal -->
+
+    <!-- Text colors -->
+    <color name="textColorPrimary">#FFFFFF</color> <!-- White -->
+    <color name="textColorSecondary">#B0B0B0</color> <!-- Light Gray -->
+
+    <!-- Background colors -->
+    <color name="backgroundColor">#121212</color> <!-- Dark Background -->
+    <color name="itemBackgroundColor">#333333</color> <!-- Dark Gray -->
+
+    <color name="textColorLight">#FFFFFF</color> <!-- White text for dark mode -->
+    <color name="spinnerTextColor">#000000</color>
+</resources>

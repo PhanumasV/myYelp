@@ -1,0 +1,90 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- RED Top Bar with SearchView inside -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/redDeep"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <android.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:queryHint="Search here..."
+                android:iconifiedByDefault="false"
+                android:background="@drawable/searchview_background"
+                android:layout_margin="8dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Horizontal layout for 'Sort By: [Spinner]' -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Sort By Label -->
+            <TextView
+                android:id="@+id/sortByLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort By:"
+                android:textColor="@color/textColorLight"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Spinner styled with custom background -->
+            <Spinner
+                android:id="@+id/sortSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/spinnerTextColor"
+                android:background="@drawable/spinner_shadow"
+                android:padding="8dp"/>
+        </LinearLayout>
+
+
+        <!-- Scrollable list of restaurants -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:background="@color/itemBackgroundColor"
+            android:clipToPadding="false" />
+
+    </LinearLayout> <!-- This closes the LinearLayout properly -->
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@color/redDeep"
+        app:itemTextColor="@android:color/white"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+        app:itemIconTint="@android:color/white"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+    

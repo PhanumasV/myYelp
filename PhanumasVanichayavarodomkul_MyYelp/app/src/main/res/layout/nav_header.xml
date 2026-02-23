@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/suhi_picture" /> <!-- Replace with your header image -->
+
+    <!-- Small Logo on Top Left -->
+    <ImageView
+        android:id="@+id/nav_header_logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="top|start"
+        android:scaleType="centerInside"
+        android:src="@drawable/sushi_icon_white" />
+
+
+    <!-- Text container with semi-transparent background overlay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#AA000000"> <!-- Semi-transparent black background -->
+
+        <TextView
+            android:id="@+id/nav_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phanumas' Yelp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="primaryColor">#6200EE</color> <!-- Purple -->
+    <color name="primaryDarkColor">#3700B3</color> <!-- Dark Purple -->
+    <color name="accentColor">#03DAC5</color> <!-- Teal -->
+
+    <!-- Text colors -->
+    <color name="textColorPrimary">#000000</color> <!-- Black -->
+    <color name="textColorSecondary">#757575</color> <!-- Gray -->
+
+    <!-- Background colors -->
+    <color name="backgroundColor">#FFFFFF</color> <!-- White -->
+    <color name="itemBackgroundColor">#F0F0F0</color> <!-- Light Gray -->
+
+    <color name="searchBarBackground">#D32F2F</color>
+
+    <color name="redDeep">#B71C1C</color> <!-- A deep red -->
+
+        <color name="textColorLight">#000000</color> <!-- Black text for light mode -->
+        <color name="spinnerTextColor">#000000</color>
+
+
+
+</resources>
