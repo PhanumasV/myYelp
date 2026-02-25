@@ -20,14 +20,15 @@ public class YelpApiClient {
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);  // Log the body of the request
 
             // Build OkHttpClient with the logging interceptor and authentication header
+            // Add Yelp Authorization header using API key stored in local PC gradle.properties (~/.gradle/gradle.properties)
             OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(chain -> {
                         Request request = chain.request().newBuilder()
-                                .addHeader("Authorization", "Bearer xEkylYJtvjDvikI0Guf5COfLiXRPVPmZC3EkqeEcmNvgwM93pY3j2EoJAchRVoDfuI2zGgIML756x9cEN3_Ox-irSSSpe9i5zIR1v7uOwyYN7X85pPSlob0kppvvZ3Yx")
+                                .addHeader("Authorization", "Bearer " + BuildConfig.YELP_API_KEY)
                                 .build();
                         return chain.proceed(request);
                     })
-                    .addInterceptor(loggingInterceptor)  // Add the logging interceptor
+                    .addInterceptor(loggingInterceptor)
                     .build();
 
             // Initialize Retrofit with the OkHttpClient and Gson converter
